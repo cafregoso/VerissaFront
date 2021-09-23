@@ -1,0 +1,28 @@
+.layout_header {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 62.5%; 
+}
+
+.layout_header-top {
+    padding: 7px;
+    height: 25px;
+    background: #6f263d;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.layout_header-top-a {
+    color: #FFF;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.layout_header-image {
+    display: grid;
+    place-content: center;
+}
+
+.layout_header-image img {
+    width: 90vw;
+}
