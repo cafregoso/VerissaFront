@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 import './Header.css'
 
@@ -18,7 +19,12 @@ export default function Header() {
                 </Row>
                 <Row>
                     <div className="layout_header-image">
-                        <img src="/img/assets/logo_verissa_2.png" alt="Logo Verissa" />
+                        <Link
+                            style={{ textDecoration: 'none', }}
+                            to={`/`}
+                        >
+                            <img src="/img/assets/logo_verissa_2.png" alt="Logo Verissa" />
+                        </Link>
                     </div>
                 </Row>
             </Container>

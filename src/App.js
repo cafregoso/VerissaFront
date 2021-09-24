@@ -2,6 +2,8 @@ import { BrowserRouter, Route, Switch, useLocation } from 'react-router-dom';
 import React, { useEffect, Fragment } from 'react'
 import Home from './Components/Pages/Home/Home'
 import Layout from './Components/Pages/Layout/Layout'
+import Subcategories from './Components/Pages/Subcategories/Subcategories'
+import Productos from './Components/Pages/Productos/Productos'
 
 
 import './App.css';
@@ -42,16 +44,16 @@ function App() {
               <Home/>
             </Fragment>
           } />
-          <Route exact path="/:subcategory" children={
+          <Route exact path="/subcategoria/:id" children={
             <Fragment>
               <ScrollToTop /> 
-              <Home/>
+              <Subcategories />
             </Fragment>
           } />
-          <Route exact path="/productos/:subcategory" children={
+          <Route exact path="/productos/:id" children={
             <Fragment>
               <ScrollToTop />
-              <Home />
+              <Productos />
             </Fragment>
           } />
           <Route exact path="/producto/:id" children={

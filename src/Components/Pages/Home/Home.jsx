@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
+import Card from '../../PageComponents/Card/Card'
 
 export default class Home extends Component {
     state = {
@@ -35,10 +37,18 @@ export default class Home extends Component {
                 <h1>Home</h1>
                 {
                     this.state.categories.map(({ id, image, name }) => (
-                        <div key={id}>
-                            <h2>{name}</h2>
-                            <img style={{ width: '150px', height: '150px'}} src={image} alt={name} />
-                        </div>
+                        <Link
+                            style={{ textDecoration: 'none', color: '#000', }}
+                            to={`/subcategoria/${id}`}
+                            key={id}
+                        >
+                            <Card 
+                                key={id}
+                                id={id}
+                                img={image}
+                                name={name}
+                            /> 
+                        </Link>
                     ))
                 }
             </div>
