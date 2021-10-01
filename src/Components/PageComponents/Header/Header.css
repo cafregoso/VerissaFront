@@ -21,8 +21,9 @@
 .layout_header-image {
     display: grid;
     place-content: center;
+    margin-top: 20px;
 }
 
 .layout_header-image img {
-    width: 90vw;
+    width: 70vw;
 }

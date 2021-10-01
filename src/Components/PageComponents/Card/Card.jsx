@@ -7,15 +7,15 @@ const styles = {
         position: 'relative',
         display: 'block',
         textAlign: 'center',
+        margin: '15px auto',
     },
     image: {
-        width: '150px',
-        height: '150px',
+        width: '300px',
     },
     name: {
-        position: 'absolute',
-        top: '70%',
-        left: '40%',
+        position: 'fix',
+        top: 'calc(100% - 45px)',
+        left: 'calc(100% - 150px)',
     },
 }
 

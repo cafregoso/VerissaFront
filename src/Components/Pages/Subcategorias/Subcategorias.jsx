@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
-import axios from 'axios'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 import Card from '../../PageComponents/Card/Card'
 
 export default function Subcategories() {

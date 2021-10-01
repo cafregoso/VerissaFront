@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+
 import Card from '../../PageComponents/Card/Card'
+import Destacado from '../../PageComponents/Destacado/Destacado'
 
 export default class Home extends Component {
     state = {
         categories: [],
-        image: [],
+        productos: [],
         loading: false,
     }
 
@@ -28,13 +30,20 @@ export default class Home extends Component {
                     loading: false,
                 })
             })
+            
+            axios
+                .get('http://localhost:8000/api/v1/productos/1')
+                .then(response => {
+                    this.setState({
+                        productos: response.data,
+                    })
+                })
     }
-
 
     render() {
         return (
             <div>
-                <h1>Home</h1>
+                <h1 style={{ marginLeft: '30px', color: '#75787B' }}>CATEGORÍAS</h1>
                 {
                     this.state.categories.map(({ id, image, name }) => (
                         <Link
@@ -43,11 +52,26 @@ export default class Home extends Component {
                             key={id}
                         >
                             <Card 
-                                key={id}
                                 id={id}
                                 img={image}
                                 name={name}
                             /> 
+                        </Link>
+                    ))
+                }
+                {
+                    this.state.productos.map(({ id, image, name }, index) => (
+                        <Link
+                            style={{ textDecoration: 'none', color: '#000', }}
+                            to={`/producto/${id}`}
+                            key={id}
+                        >
+                            <Destacado 
+                                id={id}
+                                img={image}
+                                name={name}
+                            />
+                            <p>{index}</p>
                         </Link>
                     ))
                 }

@@ -2,8 +2,9 @@ import { BrowserRouter, Route, Switch, useLocation } from 'react-router-dom';
 import React, { useEffect, Fragment } from 'react'
 import Home from './Components/Pages/Home/Home'
 import Layout from './Components/Pages/Layout/Layout'
-import Subcategories from './Components/Pages/Subcategories/Subcategories'
+import Subcategorias from './Components/Pages/Subcategorias/Subcategorias'
 import Productos from './Components/Pages/Productos/Productos'
+import Producto from './Components/Pages/Producto/Producto'
 
 
 import './App.css';
@@ -17,20 +18,6 @@ function ScrollToTop() {
 
   return null;
 }
-
-// function ScrollToProduct() {
-//   const { pathname } = useLocation();
-
-//   useEffect(() => {
-//     if (window.screen.width > 600) {
-//       window.scrollTo(900, 900);
-//     } else {
-//       window.scrollTo(600, 600);
-//     }
-//   }, [pathname]);
-
-//   return null;
-// }
 
 function App() {
 
@@ -47,7 +34,7 @@ function App() {
           <Route exact path="/subcategoria/:id" children={
             <Fragment>
               <ScrollToTop /> 
-              <Subcategories />
+              <Subcategorias />
             </Fragment>
           } />
           <Route exact path="/productos/:id" children={
@@ -59,7 +46,7 @@ function App() {
           <Route exact path="/producto/:id" children={
             <Fragment>
               <ScrollToTop />
-              <Home />
+              <Producto />
             </Fragment>
           } />
         </Layout>
