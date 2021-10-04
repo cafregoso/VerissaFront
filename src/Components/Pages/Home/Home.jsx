@@ -35,7 +35,7 @@ export default class Home extends Component {
                 .get('http://localhost:8000/api/v1/productos/1')
                 .then(response => {
                     this.setState({
-                        productos: response.data,
+                        productos: response.data.slice(0, 4),
                     })
                 })
     }
@@ -43,7 +43,7 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-                <h1 style={{ marginLeft: '30px', color: '#75787B' }}>CATEGORÍAS</h1>
+                <h1 style={{ marginLeft: '30px', color: '#75787B' }} >CATEGORÍAS</h1>
                 {
                     this.state.categories.map(({ id, image, name }) => (
                         <Link
@@ -59,8 +59,10 @@ export default class Home extends Component {
                         </Link>
                     ))
                 }
+
+                <h2 style={{ margin: '25px 15px', color: '#75787B' }} >PRODUCTOS DESTACADOS</h2>
                 {
-                    this.state.productos.map(({ id, image, name }, index) => (
+                    this.state.productos.map(({ id, image, title }) => (
                         <Link
                             style={{ textDecoration: 'none', color: '#000', }}
                             to={`/producto/${id}`}
@@ -69,9 +71,8 @@ export default class Home extends Component {
                             <Destacado 
                                 id={id}
                                 img={image}
-                                name={name}
+                                name={title}
                             />
-                            <p>{index}</p>
                         </Link>
                     ))
                 }

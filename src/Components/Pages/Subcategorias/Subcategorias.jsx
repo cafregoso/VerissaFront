@@ -18,7 +18,7 @@ export default function Subcategories() {
 
     return (
         <div>
-            <h1>Subcategorias</h1>
+            <h1 style={{ marginLeft: '30px', color: '#75787B' }} >SUBCATEGORÍAS</h1>
             {
                 categories.map(({ id, name, image}) => (
                     <Link
