@@ -13,6 +13,23 @@ const Producto = () => {
 
         const id = useParams().id;
         const [product, setProduct] = useState('')
+        const imgCarousell = []
+
+        if(product.image) {
+            imgCarousell.push(product.image)
+        }
+
+        if(product.image1) {
+            imgCarousell.push(product.image1)
+        }
+
+        if(product.image2) {
+            imgCarousell.push(product.image2)
+        }
+
+        if(product.image3) {
+            imgCarousell.push(product.image3)
+        }
 
         useEffect(() => {
             axios
@@ -39,11 +56,18 @@ const Producto = () => {
                     <figure className="image-container">
                         <img className="ProductView__img" src={image ? image : product.image} alt={product.title} />
                         <div className="ProductView__img-carousell">
-                            {/* {
-                                telas[num].iGallery.map(({ id, img }) => {
-                                    return <span key={id} onClick={handleClick}><img className="ProductView__img-carousell-min" src={img} alt={img} /></span>
-                                })
-                            } */}
+                            <span onClick={handleClick}>
+                                <img className="ProductView__img-carousell-min" src={product.image ? product.image : ''} alt={product.title} />
+                                {
+                                    product.image1 && <img className="ProductView__img-carousell-min" src={product.image1} alt={product.title} />
+                                }
+                                {
+                                    product.image2 && <img className="ProductView__img-carousell-min" src={product.image2} alt={product.title} />
+                                }
+                                {
+                                    product.image3 && <img className="ProductView__img-carousell-min" src={product.image3} alt={product.title} />
+                                }
+                            </span>
                         </div>
                     </figure>
                     <div className="ProductView__info">

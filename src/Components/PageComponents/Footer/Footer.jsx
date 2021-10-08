@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="footer_container">
             <div className="footer_box description">
                 <img style={{ width: '150px' }} src="/img/assets/logo_verissa_2.png" alt="Logo Verissa" />
-                <p style={{ margin: '5px 10px', color: '#555' }}>
+                <p style={{ margin: '5px 0', color: '#555', width: '330px', maxWidth: '600px' }}>
                     Nuestra experiencia nos ha permitido cubrir las más altas
                     expectativas de nuestros clientes. Cada proyecto a contribuido a
                     crecimiento y consolidación de nuetra empresa.
@@ -32,13 +32,13 @@ export default function Footer() {
                 </p>
             </div> 
             <div className="footer_box social">
-                <div>
+                <div className="footer_icon">
                     <img className="footer_logo" src={face} alt="Facebook" />  
                 </div>
-                <div>
+                <div className="footer_icon">
                     <img className="footer_logo" src={insta} alt="Instagram" />  
                 </div>
-                <div>
+                <div className="footer_icon">
                     <img className="footer_logo" src={linkedin} alt="LinkedIn" />  
                 </div>
             </div> 

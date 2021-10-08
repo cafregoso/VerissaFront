@@ -11,6 +11,7 @@
     min-width: 350px;
 }
 
+
 .social {
     display: grid;
     justify-content: space-evenly;
@@ -22,4 +23,26 @@
     height: 25px;
     cursor: pointer;
     margin: 10px auto;
+}
+
+@media screen and (min-width: 700px) {
+    .contact {
+        display: grid;
+        align-items: center;
+    }
+    
+    .contact p {
+        text-align: center;
+    }
+
+    .social {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 20px;
+    }
+
+    .footer_icon {
+        display: grid;
+        place-content: center;
+    }
 }

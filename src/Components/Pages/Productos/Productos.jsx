@@ -18,22 +18,28 @@ export default function Subcategories() {
 
     return (
         <div>
-            <h1>Productos</h1>
-            {
-                products.map(({ id, title, image}) => (
-                    <Link
-                        style={{ textDecoration: 'none', color: '#000', }}
-                        to={`/producto/${id}`}
-                        key={id}
-                    >
-                        <Card
-                            id={id}
-                            img={image}
-                            name={title}
-                        /> 
-                    </Link>
-                ))
-            }
+            <h1 style={{ marginLeft: '30px', color: '#75787B' }} >PRODUCTOS</h1>
+
+            <section style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+            }}>
+                {
+                    products.map(({ id, title, image}) => (
+                        <Link
+                            style={{ textDecoration: 'none', color: '#000', }}
+                            to={`/producto/${id}`}
+                            key={id}
+                        >
+                            <Card
+                                img={image}
+                                name={title}
+                            /> 
+                        </Link>
+                    ))
+                }
+            </section>
         </div>
     )
 }

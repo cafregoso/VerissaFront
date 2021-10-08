@@ -1,3 +1,7 @@
+.ProductView {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
 .image-container {
     display: grid;
     place-content: center;
@@ -6,6 +10,7 @@
 .ProductView__img {
     width: 300px;
     margin-bottom: 15px;
+    border: 1px solid black;
 }
 
 .ProductView__img-carousell {

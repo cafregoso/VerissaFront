@@ -4,6 +4,7 @@ import axios from 'axios'
 
 import Card from '../../PageComponents/Card/Card'
 import Destacado from '../../PageComponents/Destacado/Destacado'
+import Footer from '../../PageComponents/Footer/Footer'
 
 export default class Home extends Component {
     state = {
@@ -42,40 +43,63 @@ export default class Home extends Component {
 
     render() {
         return (
-            <div>
+            <div className="homeContainer">
                 <h1 style={{ marginLeft: '30px', color: '#75787B' }} >CATEGORÍAS</h1>
-                {
-                    this.state.categories.map(({ id, image, name }) => (
-                        <Link
-                            style={{ textDecoration: 'none', color: '#000', }}
-                            to={`/subcategoria/${id}`}
-                            key={id}
-                        >
-                            <Card 
-                                id={id}
-                                img={image}
-                                name={name}
-                            /> 
-                        </Link>
-                    ))
-                }
+
+                <section className="categoriesContainer" style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    justifyContent: 'center',
+                }}>
+                    {
+                        this.state.categories.map(({ id, image, name }) => {
+                            if (id === 7) {
+                                return  <Link
+                                    style={{ textDecoration: 'none', color: '#000', }}
+                                    to={`/productos/${id}`}
+                                    key={id}
+                                >
+                                    <Card 
+                                        img={image}
+                                    /> 
+                                </Link>
+                            }
+                            return  <Link
+                                style={{ textDecoration: 'none', color: '#000', }}
+                                to={`/subcategoria/${id}`}
+                                key={id}
+                            >
+                                <Card
+                                    img={image}
+                                /> 
+                            </Link>
+                        })
+                    }
+                </section>
 
                 <h2 style={{ margin: '25px 15px', color: '#75787B' }} >PRODUCTOS DESTACADOS</h2>
-                {
-                    this.state.productos.map(({ id, image, title }) => (
-                        <Link
-                            style={{ textDecoration: 'none', color: '#000', }}
-                            to={`/producto/${id}`}
-                            key={id}
-                        >
-                            <Destacado 
-                                id={id}
-                                img={image}
-                                name={title}
-                            />
-                        </Link>
-                    ))
-                }
+
+                <section className="destacadosContainer" style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    justifyContent: 'center',
+                }}>
+                    {
+                        this.state.productos.map(({ id, image, title }) => (
+                            <Link
+                                style={{ textDecoration: 'none', color: '#000', }}
+                                to={`/producto/${id}`}
+                                key={id}
+                            >
+                                <Destacado
+                                    img={image}
+                                    name={title}
+                                />
+                            </Link>
+                        ))
+                    }
+                </section>
+                <Footer />
             </div>
         )
     }

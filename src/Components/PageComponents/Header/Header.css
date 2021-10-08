@@ -26,4 +26,33 @@
 
 .layout_header-image img {
     width: 70vw;
+    max-width: 300px;
+}
+
+.layout_header-contact {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    .layout_header-image {
+        display: flex;
+        justify-content: left;
+        margin-top: 20px;
+        margin-left: 7%;
+    }
+
+    .layout_header-contact {
+        height: 30px;
+        background: #3d0010;
+        display: flex;
+        justify-content: right;
+        padding-right: 7%;
+    }
+
+    .layout_header-contact a {
+        font-size: 13px;
+        margin: auto 15px;
+        color: #FFF;
+        text-decoration: none;
+    }
 }
