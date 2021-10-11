@@ -56,7 +56,18 @@ export default class Home extends Component {
                             if (id === 7) {
                                 return  <Link
                                     style={{ textDecoration: 'none', color: '#000', }}
-                                    to={`/productos/${id}`}
+                                    to={`/productos-especiales/${id}`}
+                                    key={id}
+                                >
+                                    <Card 
+                                        img={image}
+                                    /> 
+                                </Link>
+                            }
+                            if (id === 9) {
+                                return  <Link
+                                    style={{ textDecoration: 'none', color: '#000', }}
+                                    to={`/productos-especiales/${id}`}
                                     key={id}
                                 >
                                     <Card 

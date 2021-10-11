@@ -4,6 +4,7 @@ import Home from './Components/Pages/Home/Home'
 import Layout from './Components/Pages/Layout/Layout'
 import Subcategorias from './Components/Pages/Subcategorias/Subcategorias'
 import Productos from './Components/Pages/Productos/Productos'
+import ProductosEspeciales from './Components/Pages/ProductosEspeciales/ProductosEspeciales'
 import Producto from './Components/Pages/Producto/Producto'
 
 
@@ -47,6 +48,12 @@ function App() {
             <Fragment>
               <ScrollToTop />
               <Producto />
+            </Fragment>
+          } />
+          <Route exact path="/productos-especiales/:id" children={
+            <Fragment>
+              <ScrollToTop />
+              <ProductosEspeciales />
             </Fragment>
           } />
         </Layout>

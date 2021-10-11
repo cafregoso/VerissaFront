@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 
-import './Card.css'
+import './CardProduct.css'
 
 const styles = {
     title: {
@@ -14,11 +14,11 @@ const styles = {
     },
 }
 
-export default function Card({ img, name }) {
+export default function CardProduct({ img, name }) {
 
     return (
         <Fragment>
-            <img className="card__image" style={styles.image} src={img} alt={name} />
+            <img className="cardProduct__image" style={styles.image} src={img} alt={name} />
             {
                 name && <h3 style={styles.title}>{name}</h3>
             }

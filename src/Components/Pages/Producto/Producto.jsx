@@ -13,23 +13,6 @@ const Producto = () => {
 
         const id = useParams().id;
         const [product, setProduct] = useState('')
-        const imgCarousell = []
-
-        if(product.image) {
-            imgCarousell.push(product.image)
-        }
-
-        if(product.image1) {
-            imgCarousell.push(product.image1)
-        }
-
-        if(product.image2) {
-            imgCarousell.push(product.image2)
-        }
-
-        if(product.image3) {
-            imgCarousell.push(product.image3)
-        }
 
         useEffect(() => {
             axios
@@ -132,20 +115,23 @@ const Producto = () => {
                                     </Typography>
                                 </AccordionDetails>
                             </Accordion>
-                            <Accordion className="accordion">
-                                <AccordionSummary
-                                    expandIcon={<ExpandMoreIcon />}
-                                    aria-controls="panel2a-content"
-                                    id="panel2a-header"
-                                >
+                            {
+                                product.certifications && 
+                                <Accordion className="accordion">
+                                    <AccordionSummary
+                                        expandIcon={<ExpandMoreIcon />}
+                                        aria-controls="panel2a-content"
+                                        id="panel2a-header"
+                                    >
                                     <Typography className="accordion-title">Certificaciones</Typography>
-                                </AccordionSummary>
-                                <AccordionDetails className="accordion-details">
-                                    <Typography className="accordion-desc">
-                                        <img className="img-certificate" src={product.certifications} alt="Certificado" />
-                                    </Typography>
-                                </AccordionDetails>
-                            </Accordion>
+                                    </AccordionSummary>
+                                    <AccordionDetails className="accordion-details">
+                                        <Typography className="accordion-desc">
+                                            <img className="img-certificate" src={product.certifications} alt="Certificado" />
+                                        </Typography>
+                                    </AccordionDetails>
+                                </Accordion>
+                            }
                         </div>
                     </div>
                 </div>
