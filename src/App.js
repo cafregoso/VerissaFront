@@ -50,7 +50,7 @@ function App() {
               <Producto />
             </Fragment>
           } />
-          <Route exact path="/productos-especiales/:id" children={
+          <Route exact path="/categoria/:id" children={
             <Fragment>
               <ScrollToTop />
               <ProductosEspeciales />

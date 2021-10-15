@@ -3,7 +3,6 @@
 }
 
 .cardProduct__image:hover {
-    border: 2px solid #888;
     opacity: 0.7;
     transform: scale(1.05)
 }

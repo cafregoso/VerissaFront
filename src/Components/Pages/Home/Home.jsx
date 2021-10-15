@@ -52,11 +52,11 @@ export default class Home extends Component {
                     justifyContent: 'center',
                 }}>
                     {
-                        this.state.categories.map(({ id, image, name }) => {
+                        this.state.categories.map(({ id, image }) => {
                             if (id === 7) {
                                 return  <Link
                                     style={{ textDecoration: 'none', color: '#000', }}
-                                    to={`/productos-especiales/${id}`}
+                                    to={`/categoria/${id}`}
                                     key={id}
                                 >
                                     <Card 
@@ -67,7 +67,7 @@ export default class Home extends Component {
                             if (id === 9) {
                                 return  <Link
                                     style={{ textDecoration: 'none', color: '#000', }}
-                                    to={`/productos-especiales/${id}`}
+                                    to={`/categoria/${id}`}
                                     key={id}
                                 >
                                     <Card 

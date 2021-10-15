@@ -20,8 +20,12 @@
 
 .layout_header-image {
     display: grid;
-    place-content: center;
+    place-items: center;
     margin-top: 20px;
+}
+
+.layout_header-link {
+    display: none;
 }
 
 .layout_header-image img {
@@ -33,12 +37,18 @@
     display: none;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     .layout_header-image {
         display: flex;
         justify-content: left;
-        margin-top: 20px;
-        margin-left: 7%;
+        padding-left: 70px;
+        width: 400px;
+    }
+
+    .layout_header-link {
+        display: grid;
+        place-items: center;
+        width: 150px;
     }
 
     .layout_header-contact {

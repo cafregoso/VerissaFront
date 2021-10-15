@@ -1,7 +1,8 @@
 import React from 'react'
-import { Container, Row } from 'react-bootstrap'
+import { Container, Row, DropdownButton, Dropdown, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './Header.css'
 
 export default function Header() {
@@ -17,12 +18,132 @@ export default function Header() {
                 </Row>
                 <Row>
                     <div className="layout_header-image">
-                        <Link
+                        <a
                             style={{ textDecoration: 'none', }}
-                            to={`/`}
+                            href="https://verissa.mx/"
+                            rel="noopener noreferrer"
+                            target="_blank"
                         >
                             <img src="/img/assets/logo_verissa_2.png" alt="Logo Verissa" />
+                        </a>
+                    </div>
+                    <div className="layout_header-link">
+                        <Link
+                            style={{
+                                textDecoration: 'none',
+                                color: '#3d0010',
+                                fontSize: '1.6rem'
+                            }}
+                            to={`/`}
+                            >
+                            Inicio
                         </Link>
+                    </div>
+                    <div className="layout_header-link">
+                        <DropdownButton
+                            title="CATEGORÍAS"
+                            variant="secondary"
+                            >
+                            <Dropdown.Item>
+                                <Link
+                                    style={{
+                                        textDecoration: 'none',
+                                        color: '#555',
+                                    }}
+                                    to={'/subcategoria/5'}
+                                >
+                                    Comercial
+                                </Link>
+                            </Dropdown.Item>
+                            <Dropdown.Item>
+                                <Link
+                                    style={{
+                                        textDecoration: 'none',
+                                        color: '#555',
+                                    }}
+                                    to={'/subcategoria/2'}
+                                >
+                                    Educación
+                                </Link>
+                            </Dropdown.Item>
+                            <Dropdown.Item>
+                                <Link
+                                    style={{
+                                        textDecoration: 'none',
+                                        color: '#555',
+                                    }}
+                                    to={'/subcategoria/3'}
+                                >
+                                    Healt Care
+                                </Link>
+                            </Dropdown.Item>
+                            <Dropdown.Item>
+                                <Link
+                                    style={{
+                                        textDecoration: 'none',
+                                        color: '#555',
+                                    }}
+                                    to={'/categoria/7'}
+                                >
+                                    Home Office
+                                </Link>
+                            </Dropdown.Item>
+                            <Dropdown.Item>
+                                <Link
+                                    style={{
+                                        textDecoration: 'none',
+                                        color: '#555',
+                                    }}
+                                    to={'/subcategoria/1'}
+                                >
+                                    Hotelería
+                                </Link>
+                            </Dropdown.Item>
+                            <Dropdown.Item>
+                                <Link
+                                    style={{
+                                        textDecoration: 'none',
+                                        color: '#555',
+                                    }}
+                                    to={'/subcategoria/4'}
+                                >
+                                    Industrial
+                                </Link>
+                            </Dropdown.Item>
+                            <Dropdown.Item>
+                                <Link
+                                    style={{
+                                        textDecoration: 'none',
+                                        color: '#555',
+                                    }}
+                                    to={'/subcategoria/8'}
+                                >
+                                    Corporativo
+                                </Link>
+                            </Dropdown.Item>
+                            <Dropdown.Item>
+                                <Link
+                                    style={{
+                                        textDecoration: 'none',
+                                        color: '#555',
+                                    }}
+                                    to={'/categoria/9'}
+                                >
+                                    Productos Especiales
+                                </Link>
+                            </Dropdown.Item>
+                            <Dropdown.Item>
+                                <Link
+                                    style={{
+                                        textDecoration: 'none',
+                                        color: '#555',
+                                    }}
+                                    to={'/subcategoria/6'}
+                                >
+                                    Residencial
+                                </Link>
+                            </Dropdown.Item>
+                        </DropdownButton>
                     </div>
                 </Row>
             </Container>
