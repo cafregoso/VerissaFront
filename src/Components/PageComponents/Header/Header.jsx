@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Header.css'
 
+import logo from '../../../assets/logo_verissa_2.png'
+
 export default function Header() {
     return (
         <div className="layout_header">
@@ -24,7 +26,7 @@ export default function Header() {
                             rel="noopener noreferrer"
                             target="_blank"
                         >
-                            <img src="/img/assets/logo_verissa_2.png" alt="Logo Verissa" />
+                            <img src={logo} alt="Logo Verissa" />
                         </a>
                     </div>
                     <div className="layout_header-link">
