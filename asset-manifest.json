@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/VerissaFront/static/css/main.fa6ce7c6.chunk.css",
-    "main.js": "/VerissaFront/static/js/main.1cac8a1a.chunk.js",
-    "main.js.map": "/VerissaFront/static/js/main.1cac8a1a.chunk.js.map",
+    "main.js": "/VerissaFront/static/js/main.57ad5c88.chunk.js",
+    "main.js.map": "/VerissaFront/static/js/main.57ad5c88.chunk.js.map",
     "runtime-main.js": "/VerissaFront/static/js/runtime-main.43831552.js",
     "runtime-main.js.map": "/VerissaFront/static/js/runtime-main.43831552.js.map",
     "static/css/2.c490997a.chunk.css": "/VerissaFront/static/css/2.c490997a.chunk.css",
@@ -17,13 +17,14 @@
     "static/media/Banners_home_1.ceacd876.png": "/VerissaFront/static/media/Banners_home_1.ceacd876.png",
     "static/media/face.c719a013.svg": "/VerissaFront/static/media/face.c719a013.svg",
     "static/media/insta.90a80cd5.svg": "/VerissaFront/static/media/insta.90a80cd5.svg",
-    "static/media/linkedin.8fb0cfb6.svg": "/VerissaFront/static/media/linkedin.8fb0cfb6.svg"
+    "static/media/linkedin.8fb0cfb6.svg": "/VerissaFront/static/media/linkedin.8fb0cfb6.svg",
+    "static/media/logo_verissa_2.16c6e016.png": "/VerissaFront/static/media/logo_verissa_2.16c6e016.png"
   },
   "entrypoints": [
     "static/js/runtime-main.43831552.js",
     "static/css/2.c490997a.chunk.css",
     "static/js/2.9db117a5.chunk.js",
     "static/css/main.fa6ce7c6.chunk.css",
-    "static/js/main.1cac8a1a.chunk.js"
+    "static/js/main.57ad5c88.chunk.js"
   ]
 }
