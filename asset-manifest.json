@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/VerissaFront/static/css/main.fa6ce7c6.chunk.css",
+    "main.js": "/VerissaFront/static/js/main.1cac8a1a.chunk.js",
+    "main.js.map": "/VerissaFront/static/js/main.1cac8a1a.chunk.js.map",
+    "runtime-main.js": "/VerissaFront/static/js/runtime-main.43831552.js",
+    "runtime-main.js.map": "/VerissaFront/static/js/runtime-main.43831552.js.map",
+    "static/css/2.c490997a.chunk.css": "/VerissaFront/static/css/2.c490997a.chunk.css",
+    "static/js/2.9db117a5.chunk.js": "/VerissaFront/static/js/2.9db117a5.chunk.js",
+    "static/js/2.9db117a5.chunk.js.map": "/VerissaFront/static/js/2.9db117a5.chunk.js.map",
+    "static/js/3.a307aa87.chunk.js": "/VerissaFront/static/js/3.a307aa87.chunk.js",
+    "static/js/3.a307aa87.chunk.js.map": "/VerissaFront/static/js/3.a307aa87.chunk.js.map",
+    "index.html": "/VerissaFront/index.html",
+    "static/css/2.c490997a.chunk.css.map": "/VerissaFront/static/css/2.c490997a.chunk.css.map",
+    "static/css/main.fa6ce7c6.chunk.css.map": "/VerissaFront/static/css/main.fa6ce7c6.chunk.css.map",
+    "static/js/2.9db117a5.chunk.js.LICENSE.txt": "/VerissaFront/static/js/2.9db117a5.chunk.js.LICENSE.txt",
+    "static/media/Banners_home_1.ceacd876.png": "/VerissaFront/static/media/Banners_home_1.ceacd876.png",
+    "static/media/face.c719a013.svg": "/VerissaFront/static/media/face.c719a013.svg",
+    "static/media/insta.90a80cd5.svg": "/VerissaFront/static/media/insta.90a80cd5.svg",
+    "static/media/linkedin.8fb0cfb6.svg": "/VerissaFront/static/media/linkedin.8fb0cfb6.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.43831552.js",
+    "static/css/2.c490997a.chunk.css",
+    "static/js/2.9db117a5.chunk.js",
+    "static/css/main.fa6ce7c6.chunk.css",
+    "static/js/main.1cac8a1a.chunk.js"
+  ]
+}
