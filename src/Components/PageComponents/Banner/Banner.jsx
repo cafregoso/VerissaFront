@@ -1,16 +1,11 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
-export default function Banner() {
+import './Banner.css'
+
+export default function Banner({ img }) {
     return (
-        <Fragment>
-            <div>
-                <img className="banner" />
-                <img className="banner_product" />
-            </div>
-            <div>
-                <p></p>
-            <button href></button>
-            </div>
-        </Fragment>
+        <div className="banner__container">
+            <img className="banner__image" src={ img } alt="banner" />
+        </div>
     )
 }
