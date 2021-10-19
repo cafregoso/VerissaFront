@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
@@ -11,10 +11,12 @@ import { Col, Container, Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Producto.css'
 
-const Producto = () => {
+const Producto = (props) => {
 
     const id = useParams().id;
     const [product, setProduct] = useState('')
+
+    console.log(props)
 
     useEffect(() => {
         axios
@@ -64,18 +66,7 @@ const Producto = () => {
                     <Row>
                         <h2 className="ProductView__info-title">{product.title && product.title.toUpperCase()}</h2>
                     </Row>
-                    <Row>
-                        {
-                            product.subcategory && <h3 className="ProductView__info-subtitle">Tipo de uso</h3>
-                        }
-                        <div className="ProductView__img-carousell-sub">
-                            {
-                                product.subcategory && product.subcategory.map(({ id, name, image }) => {
-                                    return <img className="ProductView__img-carousell-use" src={image} alt={name} key={id} />
-                                })
-                            }
-                        </div>
-                    </Row>
+                   
                     <Row>
                         <div className="ProductView__info">
                             <h2 className="ProductView__info-subtitle">Especificaciones</h2>
@@ -154,6 +145,18 @@ const Producto = () => {
                                     </Accordion>
                                 }
                             </div>
+                        </div>
+                    </Row>
+                     <Row>
+                        {
+                            product.subcategory && <h3 className="ProductView__info-subtitle">Tipo de uso</h3>
+                        }
+                        <div className="ProductView__img-carousell-sub">
+                            {
+                                product.subcategory && product.subcategory.map(({ id, name, image }) => {
+                                    return <img className="ProductView__img-carousell-use" src={image} alt={name} key={id} />
+                                })
+                            }
                         </div>
                     </Row>
                 </Col>

@@ -3,21 +3,40 @@ import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import Card from '../../PageComponents/Card/Card'
+import Banner from '../../PageComponents/Banner/Banner'
 
 export default function Subcategories() {
     const id = useParams().id
+    const [ subcategories, setSubcategories ] = useState([])
     const [ categories, setCategories ] = useState([])
     
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/api/v1/${id}`)
+            .get(`http://localhost:8000/api/v1/`)
             .then(response => {
                 setCategories(response.data)
             })
+
+        axios
+            .get(`http://localhost:8000/api/v1/${id}`)
+            .then(response => {
+                setSubcategories(response.data)
+            })
     }, [id])
+
+    function useBanner(category) {
+        return category.id === parseInt(id)
+    }
+
+    const imageBanner = categories.find(useBanner)
 
     return (
         <Fragment>
+            {
+                imageBanner && <Banner 
+                    img = { imageBanner.banner }
+                />
+            }
             <h1 style={{ marginLeft: '30px', color: '#75787B' }} >SUBCATEGORÍAS</h1>
 
             <section style={{
@@ -27,7 +46,7 @@ export default function Subcategories() {
                 height: '50vh'
             }}>
                 {
-                    categories.map(({ id, image}) => (
+                    subcategories.map(({ id, image }) => (
                         <Link
                             style={{ 
                                 textDecoration: 'none', 

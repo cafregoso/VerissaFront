@@ -3,10 +3,12 @@ import { useParams } from 'react-router'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import CardProduct from '../../PageComponents/CardProduct/CardProduct'
+import Banner from '../../PageComponents/Banner/Banner'
 
 export default function ProductosEspeciales() {
     const id = useParams().id
     const [ products, setProducts ] = useState([])
+    const [ categories, setCategories ] = useState([])
 
     useEffect(() => {
         axios
@@ -14,11 +16,28 @@ export default function ProductosEspeciales() {
             .then(response => {
                 setProducts(response.data)
             })
+
+        axios
+            .get(`http://localhost:8000/api/v1/`)
+            .then(response => {
+                setCategories(response.data)
+            })
     }, [id])
+
+    function useBanner(category) {
+        return category.id === parseInt(id)
+    }
+
+    const imageBanner = categories.find(useBanner)
 
     return (
         <div>
-            <h1 style={{ marginLeft: '30px', color: '#75787B' }} >PRODUCTOS ESPECIALES</h1>
+            {
+                imageBanner && <Banner 
+                    img = { imageBanner.banner }
+                />
+            }
+            <h1 style={{ marginLeft: '30px', color: '#75787B' }} >PRODUCTOS</h1>
 
             <section style={{
                 display: 'flex',

@@ -7,13 +7,12 @@ import Destacado from '../../PageComponents/Destacado/Destacado'
 import Footer from '../../PageComponents/Footer/Footer'
 import Banner from '../../PageComponents/Banner/Banner'
 
-import home from '../../../banners/Banners_home_1.png'
+import home from '../../../banners/Banners_home_1.webp'
 
 export default class Home extends Component {
     state = {
         categories: [],
         productos: [],
-        loading: false,
     }
 
     componentDidMount() {
@@ -26,22 +25,16 @@ export default class Home extends Component {
             .then(response => {
                 this.setState({
                     categories: response.data,
-                    loading: true,
-                })
-            })
-            .then(res => {
-                this.setState({
-                    loading: false,
                 })
             })
             
-            axios
-                .get('http://localhost:8000/api/v1/productos/1')
-                .then(response => {
-                    this.setState({
-                        productos: response.data.slice(0, 4),
-                    })
+        axios
+            .get('http://localhost:8000/api/v1/productos/1')
+            .then(response => {
+                this.setState({
+                    productos: response.data.slice(0, 4),
                 })
+            })
     }
 
     render() {

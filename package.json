@@ -1,7 +1,6 @@
 {
   "name": "verissa",
   "version": "0.1.0",
-  "homepage": "http://CarlosAlvarez2804.github.io/VerissaFront",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -24,8 +23,6 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build",
     "start": "REACT_APP_STAGE=dev react-scripts start",
     "build": "REACT_APP_STAGE=prod react-scripts build",
     "test": "react-scripts test",

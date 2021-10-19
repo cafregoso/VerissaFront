@@ -1,11 +1,11 @@
 import React from 'react'
-import { Container, Row, DropdownButton, Dropdown, Col } from 'react-bootstrap'
+import { Container, Row, DropdownButton, Dropdown } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Header.css'
 
-import logo from '../../../assets/logo_verissa_2.png'
+import logo from '../../../assets/logo_verissa_2.webp'
 
 export default function Header() {
     return (
@@ -38,7 +38,7 @@ export default function Header() {
                             }}
                             to={`/`}
                             >
-                            Inicio
+                            INICIO
                         </Link>
                     </div>
                     <div className="layout_header-link">

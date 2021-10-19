@@ -1,15 +1,14 @@
-import React, { Component, Fragment } from 'react'
+import React, { Fragment } from 'react'
 import Header from '../../PageComponents/Header/Header'
 
-class Layout extends Component {
-    render() {
-        return (
-            <Fragment>
-                <Header />
-                {this.props.children}
-            </Fragment>
-        )
-    }
+const Layout = ({ children }) => {
+
+    return (
+        <Fragment>
+            <Header />
+            {children}
+        </Fragment>
+    )
 }
 
 export default Layout

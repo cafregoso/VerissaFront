@@ -5,16 +5,16 @@ const dev = {
   }
 };
 
-// const prod = {
-//   URL: {
-//     SERVER: "https://atoyacci.com/api",
-//     BASE: "https://atoyacci.com"
-//   }
-// };
+const prod = {
+  URL: {
+    SERVER: "http://localhost:8000/api/v1/",
+    BASE: "http://3.86.96.55"
+  }
+};
 
 let config = '';
 if (process.env.REACT_APP_STAGE === 'prod') {
-  config = dev
+  config = prod
 } else {
   config = dev
 }
