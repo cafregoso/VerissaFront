@@ -6,6 +6,7 @@ import Card from '../../PageComponents/Card/Card'
 import Destacado from '../../PageComponents/Destacado/Destacado'
 import Footer from '../../PageComponents/Footer/Footer'
 import Banner from '../../PageComponents/Banner/Banner'
+import Info from '../../PageComponents/Info/Info'
 
 import home from '../../../banners/Banners_home_1.webp'
 
@@ -112,6 +113,7 @@ export default class Home extends Component {
                         }
                     </section>
                     <Footer />
+                    <Info />
                 </div>
             </Fragment>
         )

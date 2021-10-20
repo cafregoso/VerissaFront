@@ -6,9 +6,11 @@ const styles = {
     title: {
         display: 'flex',
         justifyContent: 'center',
+        fontSize: '16px',
+        color: '#555',
     },
     image: {
-        width: '300px',
+        width: '150px',
         borderRadius: '4px',
         margin: '10px'
     },

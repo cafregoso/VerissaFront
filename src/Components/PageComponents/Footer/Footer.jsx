@@ -4,13 +4,15 @@ import face from '../../../assets/face.svg'
 import insta from '../../../assets/insta.svg'
 import linkedin from '../../../assets/linkedin.svg'
 
+import logo from '../../../assets/logo_verissa_2.webp'
+
 import './Footer.css'
 
 export default function Footer() {
     return (
         <div className="footer_container">
             <div className="footer_box description">
-                <img style={{ width: '150px' }} src="/img/assets/logo_verissa_2.png" alt="Logo Verissa" />
+                <img style={{ width: '150px' }} src={ logo } alt="Logo Verissa" />
                 <p style={{ margin: '5px 0', color: '#555', width: '330px', maxWidth: '600px' }}>
                     Nuestra experiencia nos ha permitido cubrir las más altas
                     expectativas de nuestros clientes. Cada proyecto a contribuido a
