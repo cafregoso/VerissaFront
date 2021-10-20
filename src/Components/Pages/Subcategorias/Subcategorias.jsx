@@ -12,13 +12,13 @@ export default function Subcategories() {
     
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/api/v1/`)
+            .get(`http://3.86.96.55/api/v1/`)
             .then(response => {
                 setCategories(response.data)
             })
 
         axios
-            .get(`http://localhost:8000/api/v1/${id}`)
+            .get(`http://3.86.96.55/api/v1/${id}`)
             .then(response => {
                 setSubcategories(response.data)
             })
