@@ -1,0 +1,44 @@
+.container-logo-30 {
+  width: 50%;
+  max-width: 120px;
+  margin: 10px 0 30px 0;
+}
+
+.container-logo-30 img {
+  width: 100%;
+}
+
+.title-section {
+  font-weight: bold;
+}
+
+.bm-menu-wrap {
+  width: 40% !important;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.submenu-link {
+  margin: 10px auto;
+}
+
+.bm-item a {
+  font-size: 16px;
+  color: #444;
+  text-decoration: none;
+}
+
+@media (min-width: 800px) {
+  .container__menu {
+    display: none !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .bm-burger-button {
+    left: 10px !important;
+    top: 20px !important;
+  }
+}

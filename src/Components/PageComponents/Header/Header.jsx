@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './Header.css'
 
 import logo from '../../../assets/logo_verissa_2.webp'
+import Menu from '../Menu/Menu'
 
 export default function Header() {
     return (
@@ -147,6 +148,7 @@ export default function Header() {
                             </Dropdown.Item>
                         </DropdownButton>
                     </div>
+                <Menu className="layout_header-menu" />
                 </Row>
             </Container>
         </div>
