@@ -14,7 +14,7 @@ const styles = {
         top: '36px'
     },
     bmBurgerBars: {
-        background: '#000'
+        background: '#444'
     },
     bmBurgerBarsHover: {
         background: '#a90000'
