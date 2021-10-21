@@ -1,6 +1,6 @@
 const dev = {
   URL: {
-    SERVER: "http://3.86.96.55/api/v1/",
+    SERVER: "http://localhost:8000/api/v1/",
     BASE: "http://localhost:8000"
   }
 };

@@ -5,12 +5,14 @@ import axios from 'axios'
 import Card from '../../PageComponents/Card/Card'
 import Destacado from '../../PageComponents/Destacado/Destacado'
 import Footer from '../../PageComponents/Footer/Footer'
-import Banner from '../../PageComponents/Banner/Banner'
+import Slide from '../../PageComponents/Slide/Slide'
 import Info from '../../PageComponents/Info/Info'
 
-import home from '../../../banners/Banners_home_1.webp'
+import banner1 from '../../../banners/Banners_home_1.webp'
+import banner2 from '../../../banners/Banners_home_2.webp'
+import banner3 from '../../../banners/Banners_home_3.webp'
 
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 export default class Home extends Component {
     state = {
         categories: [],
@@ -23,7 +25,7 @@ export default class Home extends Component {
 
     get_data() {
         axios
-            .get('http://3.86.96.55/api/v1/')
+            .get(`http://localhost:8000/api/v1/`)
             .then(response => {
                 this.setState({
                     categories: response.data,
@@ -31,7 +33,7 @@ export default class Home extends Component {
             })
             
         axios
-            .get('http://3.86.96.55/api/v1/productos/1')
+            .get(`http://localhost:8000/api/v1/productos/1`)
             .then(response => {
                 this.setState({
                     productos: response.data.slice(0, 4),
@@ -42,10 +44,12 @@ export default class Home extends Component {
     render() {
         return (
             <Fragment>
-                <Banner
-                    img={home}
+                <Slide
+                    banner1={ banner1 }
+                    banner2={ banner2 }
+                    banner3={ banner3 }
                 />
-                <div className="homeContainer">
+                <div className="homeContainer" style={{ marginTop: '30px' }}>
                     <h1 style={{ marginLeft: '30px', color: '#75787B' }} >CATEGORÍAS</h1>
 
                     <section className="categoriesContainer" style={{

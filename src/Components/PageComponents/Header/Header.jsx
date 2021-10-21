@@ -34,7 +34,7 @@ export default function Header() {
                             style={{
                                 textDecoration: 'none',
                                 color: '#3d0010',
-                                fontSize: '1.6rem'
+                                fontSize: '18px'
                             }}
                             to={`/`}
                             >

@@ -8,11 +8,9 @@ export default function Productos(props) {
     const id = useParams().id
     const [ products, setProducts ] = useState([])
 
-    console.log(useHistory())
-
     useEffect(() => {
         axios
-            .get(`http://3.86.96.55/api/v1/productos/${id}`)
+            .get(`http://localhost:8000/api/v1/productos/${id}`)
             .then(response => {
                 setProducts(response.data)
             })
