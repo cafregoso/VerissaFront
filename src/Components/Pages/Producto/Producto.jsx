@@ -12,14 +12,14 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './Producto.css'
 import Info from '../../PageComponents/Info/Info';
 
-const Producto = (props) => {
+const Producto = () => {
 
     const id = useParams().id;
     const [product, setProduct] = useState('')
 
     useEffect(() => {
         axios
-            .get(`http://3.86.96.55/api/v1/producto/${id}`)
+            .get(`http://localhost:8000/api/v1/producto/${id}`)
             .then(response => {
                 setProduct(response.data)
             })
@@ -128,18 +128,22 @@ const Producto = (props) => {
                                         </AccordionDetails>
                                     </Accordion>
                                     {
-                                        product.certifications &&
+                                        product.certifications && 
                                         <Accordion className="accordion">
                                             <AccordionSummary
                                                 expandIcon={<ExpandMoreIcon />}
                                                 aria-controls="panel2a-content"
                                                 id="panel2a-header"
-                                            >
+                                                >
                                                 <Typography className="accordion-title">Certificaciones</Typography>
                                             </AccordionSummary>
                                             <AccordionDetails className="accordion-details">
                                                 <Typography className="accordion-desc">
-                                                    <img className="img-certificate" src={product.certifications} alt="Certificado" />
+                                                    {
+                                                        product.certifications && product.certifications.map(({ id, name, image }) => {
+                                                            return <img key={ id } className="img-certificate" src={ image } alt={ name } />
+                                                        })
+                                                    }
                                                 </Typography>
                                             </AccordionDetails>
                                         </Accordion>

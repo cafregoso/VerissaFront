@@ -68,17 +68,9 @@
     white-space: -o-pre-wrap;
 }
 
-/* .img-certificate{
+.img-certificate{
+    width: 50%;
 }
-
-.telas{
-}
-
-.accordion-colors {
-}
-
-.accordion-colors span {
-} */
 
 @media screen and (min-width: 768px) {
     .ProductView__img-container {
