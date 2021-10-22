@@ -19,7 +19,7 @@ const Producto = () => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/api/v1/producto/${id}`)
+            .get(`http://3.86.96.55/api/v1/producto/${id}`)
             .then(response => {
                 setProduct(response.data)
             })
