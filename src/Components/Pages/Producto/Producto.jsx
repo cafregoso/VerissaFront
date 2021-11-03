@@ -128,8 +128,7 @@ const Producto = () => {
                                         </AccordionDetails>
                                     </Accordion>
                                     {
-                                        product.certifications && 
-                                        <Accordion className="accordion">
+                                        product.certifications && product.certifications != 0 && <Accordion className="accordion">
                                             <AccordionSummary
                                                 expandIcon={<ExpandMoreIcon />}
                                                 aria-controls="panel2a-content"
