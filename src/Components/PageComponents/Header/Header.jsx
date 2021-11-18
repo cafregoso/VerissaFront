@@ -77,7 +77,7 @@ export default function Header() {
                                     }}
                                     to={'/subcategoria/3'}
                                 >
-                                    Healt Care
+                                    Health Care
                                 </Link>
                             </Dropdown.Item>
                             <Dropdown.Item>
