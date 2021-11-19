@@ -12,13 +12,13 @@ export default function ProductosEspeciales() {
 
     useEffect(() => {
         axios
-            .get(`http://192.168.2.150/api/v1/product/${id}`)
+            .get(`http://177.231.255.18/api/v1/product/${id}`)
             .then(response => {
                 setProducts(response.data)
             })
 
         axios
-            .get(`http://192.168.2.150/api/v1/`)
+            .get(`http://177.231.255.18/api/v1/`)
             .then(response => {
                 setCategories(response.data)
             })

@@ -25,7 +25,7 @@ export default class Home extends Component {
 
     get_data() {
         axios
-            .get(`http://192.168.2.150/api/v1/`)
+            .get(`http://177.231.255.18/api/v1/`)
             .then(response => {
                 this.setState({
                     categories: response.data,
@@ -33,7 +33,7 @@ export default class Home extends Component {
             })
             
         axios
-            .get(`http://192.168.2.150/api/v1/productos/1`)
+            .get(`http://177.231.255.18/api/v1/productos/1`)
             .then(response => {
                 this.setState({
                     productos: response.data.slice(0, 4),

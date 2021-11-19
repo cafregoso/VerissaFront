@@ -1,13 +1,13 @@
 const dev = {
   URL: {
-    SERVER: "http://192.168.2.150/api/v1/",
+    SERVER: "http://177.231.255.18/api/v1/",
     BASE: "http://localhost:8000"
   }
 };
 
 const prod = {
   URL: {
-    SERVER: "http://192.168.2.150/api/v1/",
+    SERVER: "http://177.231.255.18/api/v1/",
     BASE: "http://3.86.96.55"
   }
 };

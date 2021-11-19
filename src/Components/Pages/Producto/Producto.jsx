@@ -19,7 +19,7 @@ const Producto = () => {
 
     useEffect(() => {
         axios
-            .get(`http://192.168.2.150/api/v1/producto/${id}`)
+            .get(`http://177.231.255.18/api/v1/producto/${id}`)
             .then(response => {
                 setProduct(response.data)
             })

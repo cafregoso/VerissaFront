@@ -10,7 +10,7 @@ export default function Productos(props) {
 
     useEffect(() => {
         axios
-            .get(`http://192.168.2.150/api/v1/productos/${id}`)
+            .get(`http://177.231.255.18/api/v1/productos/${id}`)
             .then(response => {
                 setProducts(response.data)
             })
